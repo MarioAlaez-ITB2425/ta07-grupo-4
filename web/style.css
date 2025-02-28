@@ -1,0 +1,100 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px auto;
+  max-width: 1200px;
+  background-color: #f8f9fa;
+  color: #343a40;
+  text-align: center;
+}
+h1 {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+h2, h3 {
+  color: #28a745;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.input-group label {
+  margin-right: 15px;
+  width: 180px;
+  text-align: right;
+  font-weight: bold;
+}
+select, input[type="date"], input[type="number"] {
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1em;
+  flex-grow: 1;
+  max-width: 250px;
+}
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #0056b3;
+}
+canvas {
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Seccions centrades amb amplada limitada */
+#periodSelection, #recsDiv, #calculationsSection, #annualCalculatorSection {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 800px;
+  text-align: left;
+}
+#calculationsSection h3 {
+  margin-top: 0;
+  color: #00a65a;
+}
+#recsDiv ul {
+  list-style-type: square;
+  padding-left: 25px;
+}
+#recsDiv li {
+  margin-bottom: 8px;
+}
+#annualCalculatorSection {
+  text-align: center;
+}
+#annualCalculatorSection h3 {
+  text-align: left;
+}
+#monthlyExpenseOutput, #dailyExpenseOutput {
+  margin-top: 10px;
+  font-weight: bold;
+}
+#annualCalculationsOutput {
+  margin-top: 20px;
+  text-align: left;
+}
+#annualCalculationsOutput p {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Consums del Institut</title>
+  <!-- Es carreguen Chart.js i PapaParse des de CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Calculadora de Consums del Institut</h1>
+
+  <!-- 1. Selecció d'indicador i tipus de càlcul -->
+  <div id="indicatorSelectionSection" class="input-group">
+    <label for="indicatorSelect">Selecciona l'indicador:</label>
+    <select id="indicatorSelect">
+      <option value="Electricitat">Electricitat</option>
+      <option value="Aigua">Aigua</option>
+      <option value="Materials (Consumibles d'oficina)">Materials (Consumibles d'oficina)</option>
+      <option value="Serveis">Serveis</option>
+    </select>
+  </div>
+
+  <!-- 5. Secció de Càlculs -->
+  <div id="calculationsSection">
+    <h3>Càlculs de Consum</h3>
+    <div id="calculationResults">
+      <!-- Aquí es mostraran els resultats dels càlculs -->
+    </div>
+
+    <!-- Calculadora de Despesa Anual -->
+    <div id="annualCalculatorSection">
+      <h3>Calculadora de Consum Anual Ràpida</h3>
+      <div class="input-group">
+        <label for="annualExpenseInput" id="annualExpenseLabel">Despesa Anual Total (€):</label>
+        <input type="number" id="annualExpenseInput" placeholder="Introdueix la despesa anual">
+      </div>
+      <div id="monthlyExpenseOutput"><b>Despesa Mensual Aproximada:</b> - €</div>
+      <div id="dailyExpenseOutput"><b>Despesa Diària Aproximada:</b> - €</div>
+
+      <div id="annualCalculationsOutput">
+        <!-- Es mostraran aquí els càlculs anuals basats en l'input -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Gràfic de l'històric -->
+  <h2>Històric de Consum</h2>
+  <canvas id="historicalChart"></canvas>
+
+  <!-- 4. Recomanacions -->
+  <h2>Recomanacions per Reduir el Consum</h2>
+  <div class="input-group">
+    <input type="checkbox" id="showRecs">
+    <label for="showRecs">Mostrar recomanacions</label>
+  </div>
+  <div id="recsDiv" style="display:none;"></div>
+
+  <p style="margin-top: 30px; font-size: 0.9em; color: #6c757d;">
+    Nota: Aquesta aplicació llegeix els CSV situats a la carpeta <strong>csv</strong> i aplica un model de forecasting (Holt–Winters amb tendència i estacionalitat) per estimar els consums futurs.
+  </p>
+
+  <script src="script.js"></script>
+</body>
+</html>
